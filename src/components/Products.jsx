@@ -1,14 +1,25 @@
 import './products.css'
 import { AddToCartIcon } from './Icons'
 
-export function Products({ products }) {
+
+export function Products({products }) {
   return (
-    <main>
+    <main className='products'>
+      
       <ul>
-        {products.map((products) => (
+        {products.slice(0,10).map(product => (
           <li key={product.id}>
             <img src={product.thumbnail} alt={product.title} />
-            <div></div>
+            <div>
+              <strong>
+                {product.title} - ${product.price}
+              </strong>
+            </div>
+            <div>
+              <button>
+                <AddToCartIcon/>
+              </button>
+            </div>
           </li>
         ))}
       </ul>
