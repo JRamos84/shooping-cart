@@ -4,6 +4,7 @@ import {
   ClearCartIcon,
   RemoveFromCartIcon,
 } from '../components/Icons'
+import './cart.css'
 
 export function Cart() {
   const cartCheckBoxId = useId()
